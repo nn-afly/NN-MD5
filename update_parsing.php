@@ -15,7 +15,6 @@ require_once ("hashcompare.php");
 
 hashInit();
 
-die();
 
 //This script updates release names for releases in 'TV > Other', 'Movie > Other', 'XXX > Other', and 'Other > Misc' categories.
 //It first attempts to extract the release name from the NFO, falling back to rarset filename -- the ReleaseFiles.
