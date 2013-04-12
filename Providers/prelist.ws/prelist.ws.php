@@ -48,7 +48,7 @@ require_once (FS_ROOT . "/../../www/lib/util.php");
 				
 			$src = "http://www.prelist.ws/?start=0";	
 
-			echo "prelist.we - request...";
+			echo "prelist.ws - request...";
 			$apiresponse = getUrl($src); 
 		
 			if ($apiresponse)

@@ -24,7 +24,7 @@ require_once (FS_ROOT . "/../../www/lib/util.php");
 	
 	$src = "https://pre.corrupt-net.org/rss.php?k=".$key;	
 	
-	echo "request...";
+	echo "pre.corrupt.net - request...";
 	$apiresponse = getUrl($src); 
 		
 	if ($apiresponse)
