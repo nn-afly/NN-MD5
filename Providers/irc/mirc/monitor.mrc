@@ -4,8 +4,10 @@ set %var ""
 on $*:text:/\b/Si:#gp.pre:{
   tokenize 32 $strip($1-) {
     if (.: isin $1-) {
+     if ($6- != [) {
       %var = $6
-      /sockopen p2pnetgppre YOURDOMAINORIPHERE 80
+      /sockopen p2pnetgppre hakt.tv 80
+      }
     }
   }
 }
@@ -15,7 +17,7 @@ on $*:text:/\b/Si:#p2p-nl-pre:{
   tokenize 32 $strip($1-) {
     if ($7- != [) {
       %var = $7
-      /sockopen p2pnetp2pnlpre YOURDOMAINORIPHERE 80
+      /sockopen p2pnetp2pnlpre hakt.tv 80
     }
   }
 
@@ -75,4 +77,3 @@ on *:SOCKREAD:p2pnetp2pnlpre: {
   ; if there was stuff received from the socket, then echo it 
   goto nextread 
 }
-
