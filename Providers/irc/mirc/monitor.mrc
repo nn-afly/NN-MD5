@@ -1,7 +1,7 @@
 
 set %var ""
 
-on $*:text:/\b/Si:#:{
+on $*:text:/\b/Si:#gp.pre:{
   tokenize 32 $strip($1-) {
     if (.: isin $1-) {
       %var = $6
@@ -9,6 +9,18 @@ on $*:text:/\b/Si:#:{
     }
   }
 }
+
+
+on $*:text:/\b/Si:#p2p-nl-pre:{
+  tokenize 32 $strip($1-) {
+    if ($7- != [) {
+      %var = $7
+      /sockopen http YOURDOMAINORIPHERE 80
+    }
+  }
+
+}
+
 
 
 on *:SOCKOPEN:http: { 
