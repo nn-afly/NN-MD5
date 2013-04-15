@@ -12,4 +12,6 @@ Unlike the optional choice of providers, hashcompare.php is the central comparis
 
 In addition, the hascompare-standalone.php file can be called from your screen script whenever you like to process the hashes.
 
+DO NOT hammer providers with requests! They are kind enough to provide this information publically. Be respectful.
+
 
