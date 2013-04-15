@@ -6,7 +6,7 @@ on $*:text:/\b/Si:#gp.pre:{
     if (.: isin $1-) {
      if ($6- != [) {
       %var = $6
-      /sockopen p2pnetgppre hakt.tv 80
+      /sockopen p2pnetgppre YOURDOMAINORIP 80
       }
     }
   }
@@ -17,7 +17,7 @@ on $*:text:/\b/Si:#p2p-nl-pre:{
   tokenize 32 $strip($1-) {
     if ($7- != [) {
       %var = $7
-      /sockopen p2pnetp2pnlpre hakt.tv 80
+      /sockopen p2pnetp2pnlpre YOURDOMAINORIP 80
     }
   }
 
