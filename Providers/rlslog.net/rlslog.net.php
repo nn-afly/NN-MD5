@@ -36,7 +36,6 @@ if ($apiresponse) {
            
             if ($res['total'] == 0) {
                 AddRelease($cleanname, $item->pubDate);
-                echo "Added - ".$cleanname."\n";
             }
            
         }

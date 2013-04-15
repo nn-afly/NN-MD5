@@ -60,8 +60,6 @@ require_once (FS_ROOT . '/../../www/lib/util.php');
 					
 					if ($res['total'] == 0)
 					{	
-						echo $release;
-						echo $time;
 					
 						AddRelease($release, date('Y-m-d H:i:s',(int)$time));
 					
