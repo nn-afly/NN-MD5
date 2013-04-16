@@ -1,7 +1,7 @@
 NN-MD5
 ======
 
-Collects scene data using the providers, stores them with an MD5 hash in NN, compares releases names with the hashes, renames and categorizes the releases.
+Collects scene data using the providers, stores them with an MD5 hash in NN, compares releases names with the hashes, renames and categorizes the releases. Based off an original idea by hw.
 
 With the exception of the /providers/irc section, all files should be placed in /testing 
 
