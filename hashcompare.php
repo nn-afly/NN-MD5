@@ -14,7 +14,7 @@ require_once (FS_ROOT_OVERRIDE . "/../../www/lib/category.php");
  	function getHashes()
 	{			
 		$db = new DB();
-		return $db->query(sprintf("SELECT r.ID, ph.releasename, g.name FROM releases r join prehash  ph on ph.hash = r.searchname join groups g ON g.ID = r.groupID "));		
+		return $db->query(sprintf("SELECT r.ID, ph.releasename, g.name FROM releases r join prehash  ph on ph.hash = r.searchname join groups g ON g.ID = r.groupID  WHERE r.categoryid = 8010"));		
 	}
 		
 	function updaterelease($foundName, $id, $groupname)
