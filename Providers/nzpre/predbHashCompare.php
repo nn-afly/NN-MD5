@@ -6,8 +6,6 @@ require_once (FS_ROOT_OVERRIDE . "/../../www/lib/releases.php");
 require_once (FS_ROOT_OVERRIDE . "/../../www/lib/category.php");
 		
 		
-		
-		
 	function getNoHash()
 	{	
 		$db = new DB();
@@ -40,26 +38,19 @@ require_once (FS_ROOT_OVERRIDE . "/../../www/lib/category.php");
 		
 	}
 
-			//add hashes to all new pre records
-			$results = getNoHash();			
-			foreach($results as $result) 
-			{
-				updateHash($result['ID'], md5($result['dirname']));	
-			}
+	//add hashes to all new pre records
+	$results = getNoHash();			
+	foreach($results as $result) 
+	{
+		updateHash($result['ID'], md5($result['dirname']));	
+	}
 			
-			//comapre with releases
-			$results = getHashes();			
-			foreach($results as $result) 
-			{
-				echo "Hash Match! Renaming release... ".$result['dirname']."\n";
-				updaterelease($result['dirname'], $result['ID'], $result['name']);	
-			}
-			
-			
-			
-			
-			
-			
-			
+	//compare with releases
+	$results = getHashes();			
+	foreach($results as $result) 
+	{
+		echo "Hash Match! Renaming release... ".$result['dirname']."\n";
+		updaterelease($result['dirname'], $result['ID'], $result['name']);	
+	}
 			
 ?>
