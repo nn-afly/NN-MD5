@@ -12,6 +12,8 @@ Unlike the optional choice of providers, hashcompare.php is the central comparis
 
 In addition, the hascompare-standalone.php file can be called from your screen script whenever you like to process the hashes.
 
+NZPre users only need patch the db and use the file in /Providers/nzpre/ nothing else.
+
 DO NOT hammer providers with requests! They are kind enough to provide this information publically at their own expense. The information across providers is almost all the same so be respectful. IRC is the preferred and most effective solution.
 
 
