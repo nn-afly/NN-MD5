@@ -6,7 +6,7 @@ NOTE - These scripts will likely be deprecated in the near future in favour of a
 
 Collects scene data using the providers, stores them with an MD5 hash in NN, compares releases names with the hashes, renames and categorizes the releases. Based off an original idea by hw.
 
-NZPre users should jump striaght to /Providers/nzpre/ for more information
+NZPre users should jump straight to /Providers/nzpre/ for more information
 
 With the exception of the /providers/irc section, all files should be placed in /testing 
 
