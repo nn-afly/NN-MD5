@@ -1,7 +1,7 @@
 NN-MD5
 ======
 
-NOTE - These script will likely be deprecated in the near future in favour of an upcoming better NN solution.
+NOTE - These scripts will likely be deprecated in the near future in favour of an upcoming better NN solution.
 
 
 Collects scene data using the providers, stores them with an MD5 hash in NN, compares releases names with the hashes, renames and categorizes the releases. Based off an original idea by hw.
