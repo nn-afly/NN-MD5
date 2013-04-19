@@ -3,6 +3,7 @@ define('FS_ROOT', realpath(dirname(__FILE__)));
 require_once (FS_ROOT . "/../../www/config.php");
 require_once (FS_ROOT . "/../../www/lib/framework/db.php");
 require_once (FS_ROOT . "/../../www/lib/util.php");
+require_once ("hashcompare.php");
 
  
      function match_all_key_value($regex, $str, $keyIndex = 1, $valueIndex = 2){
@@ -27,25 +28,8 @@ require_once (FS_ROOT . "/../../www/lib/util.php");
         else
             return false;
     }
-		
 	
-	function getRelease($name)
-	{			
-		$db = new DB();
-
-		return $db->queryOneRow(sprintf("SELECT count(*) as total FROM prehash WHERE releasename =  %s", $db->escapeString($name)));		
-	}
-	
-	
-	function AddRelease($name)
-	{			
-		$db = new DB();
-		return $db->queryInsert(sprintf("INSERT INTO prehash (releasename, hash) VALUES (%s, %s)", $db->escapeString($name), $db->escapeString(md5($name))));		
-	}
-		
-		
-	
-				
+			
 			$src = "http://www.prelist.ws/?start=0";	
 
 			echo "prelist.ws - request...";
@@ -70,7 +54,7 @@ require_once (FS_ROOT . "/../../www/lib/util.php");
 								{
 									if ($res['total'] == 0)
 									{	
-										AddRelease(trim($p));
+										AddRelease(trim($p), '');
 									//	echo "Added - ".$p."\n";
 									}
 								}

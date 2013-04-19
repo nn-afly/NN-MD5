@@ -5,6 +5,20 @@ require_once (FS_ROOT_OVERRIDE . "/../../www/lib/framework/db.php");
 require_once (FS_ROOT_OVERRIDE . "/../../www/lib/releases.php");
 require_once (FS_ROOT_OVERRIDE . "/../../www/lib/category.php");
 		
+	
+	function getRelease($name)
+	{			
+		$db = new DB();
+		return $db->queryOneRow(sprintf("SELECT count(*) as total FROM prehash WHERE releasename =  %s", $db->escapeString($name)));		
+	}
+	
+	
+	function AddRelease($name, $date)
+	{			
+		$db = new DB();
+		return $db->queryInsert(sprintf("INSERT INTO prehash (releasename, hash, predate) VALUES (%s, %s, %s)", $db->escapeString($name), $db->escapeString(md5($name)), $db->escapeString($date)));		
+	}
+	
 		
 	function CheckExists()
 	{	
